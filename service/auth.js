@@ -1,6 +1,7 @@
+import dotenv from 'dotenv'
+dotenv.config()
 import jwt from 'jsonwebtoken'
 const secretKey = process.env.SECRET_KEY
-// const sessionIdToUserMap =new Map;
 
 function setUser(user) {
   // sessionIdToUserMap.set(id,user)
