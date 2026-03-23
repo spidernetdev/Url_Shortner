@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SIGN UP</title>
+    <style>
+        /* Animated Gradient Background */
+        body {
+            margin: 0;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            background: linear-gradient(45deg, #6a11cb, #2575fc, #ff7eb3, #ff758c);
+            background-size: 300% 300%;
+            animation: gradientMove 12s ease infinite;
+        }
+
+        @keyframes gradientMove {
+            0% {
+                background-position: 0% 50%;
+            }
+
+            50% {
+                background-position: 100% 50%;
+            }
+
+            100% {
+                background-position: 0% 50%;
+            }
+        }
+
+        /* Center Container */
+        .container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+        }
+
+        /* Glassmorphism Card */
+        .glass-card {
+            width: 350px;
+            padding: 30px;
+            border-radius: 20px;
+
+            background: rgba(255, 255, 255, 0.15);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.3);
+
+            box-shadow: 0 8px 32px rgba(31, 38, 135, 0.2);
+            animation: fadeIn 1s ease;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(10px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Improved Title */
+        .title {
+            text-align: center;
+            font-size: 28px;
+            font-weight: 700;
+            letter-spacing: 1px;
+            color: #ffffff;
+            text-shadow: 0 2px 10px rgba(0, 0, 0, 0.4);
+            margin-bottom: 20px;
+        }
+
+        /* Inputs */
+        input {
+            width: 100%;
+            padding: 12px;
+            margin: 10px 0;
+            border-radius: 10px;
+            border: none;
+
+            background: rgba(255, 255, 255, 0.25);
+            color: white;
+            outline: none;
+            font-size: 15px;
+
+            backdrop-filter: blur(4px);
+        }
+
+        input::placeholder {
+            color: rgba(255, 255, 255, 0.7);
+        }
+
+        /* Button */
+        button {
+            width: 100%;
+            padding: 12px;
+            margin-top: 15px;
+
+            background: rgba(255, 255, 255, 0.8);
+            border: none;
+            border-radius: 10px;
+            font-size: 16px;
+            font-weight: 600;
+
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        button:hover {
+            background: white;
+            transform: translateY(-2px);
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+        <div class="glass-card">
+
+            <h1 class="title">Create Your Account</h1>
+
+            <form action="/user" method="POST">
+                <input type="text" required name="name" placeholder="Full Name">
+                <input type="email" required name="email" placeholder="Email Address">
+                <input type="password" required name="password" placeholder="Password">
+
+                <button type="submit">Sign Up</button>
+                
+
+                <a href="/login" class="login-link">Already have an account?</a>
+            </form>
+
+        </div>
+    </div>
+
+</body>
+
+</html>
